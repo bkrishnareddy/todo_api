@@ -1,4 +1,4 @@
-from run import db
+from todo import db
 
 class User(db.Model):
 	id = db.Column(db.Integer,primary_key=True)
@@ -8,7 +8,7 @@ class User(db.Model):
 	admin = db.Column(db.Boolean)
 
 	def __repr__(self):
-		return f'Name ={self.name}, admin={self.admin}'
+		return f'Name ={self.name}, admin={self.admin}' ''
 
 class Todo(db.Model):
 	id = db.Column(db.Integer,primary_key=True)
@@ -17,4 +17,4 @@ class Todo(db.Model):
 	user_id = db.Column(db.Integer)
 
 	def __repr__(self):
-		return f'Descr ={self.text}, Complete Status={self.complete}'
+		return f'Descr ={self.text}, Complete Status={self.complete}'  
